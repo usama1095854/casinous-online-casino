@@ -38,7 +38,7 @@
 <script src="assets/js/main.js"></script>
 
 
-<script>
+<!-- <script>
     const el = document.getElementById("typing-effect");
 
     if (el) {
@@ -74,7 +74,45 @@
         el.textContent = ""; // Clear original before typing
         type();
     }
+</script> -->
+
+
+<script>
+    document.querySelectorAll(".typing-effect").forEach((el) => {
+        const text = el.textContent.trim();
+        let index = 0;
+        let isDeleting = false;
+        const typingSpeed = 300;
+        const backspaceSpeed = 150;
+        const delayAfterFullText = 700;
+
+        function type() {
+            if (isDeleting) {
+                index--;
+                el.textContent = text.substring(0, index);
+            } else {
+                index++;
+                el.textContent = text.substring(0, index);
+            }
+
+            let delay = isDeleting ? backspaceSpeed : typingSpeed;
+
+            if (!isDeleting && index === text.length) {
+                delay = delayAfterFullText;
+                isDeleting = true;
+            } else if (isDeleting && index === 0) {
+                isDeleting = false;
+                delay = 2000;
+            }
+
+            setTimeout(type, delay);
+        }
+
+        el.textContent = "\u00A0"; // Prevent layout collapse
+        type();
+    });
 </script>
+
 
 
 </body>

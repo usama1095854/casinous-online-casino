@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7 col-xl-6 text-center">
-                <h2 class="title text-white" id="typing-effect">Sign Up</h2>
+                <h2 class="title text-white typing-effect">Sign Up</h2>
                 <ul class="breadcrumbs d-flex flex-wrap align-items-center justify-content-center">
                     <li><a href="index.php">Home</a></li>
                     <li>Sign Up</li>

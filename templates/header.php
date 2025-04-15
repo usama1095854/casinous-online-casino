@@ -24,7 +24,7 @@
 <body data-bs-spy="scroll" data-bs-offset="170" data-bs-target=".privacy-policy-sidebar-menu">
 
     <div class="overlay"></div>
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="scene" id="scene">
             <input type="checkbox" id="andicator" />
             <div class="cube">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="header">
         <div class="container">
@@ -60,6 +60,9 @@
                         </li>
                         <li>
                             <a href="contact.php">Contact US</a>
+                        </li>
+                        <li>
+                            <a href="sign-up.php">Sign UP</a>
                         </li>
 
                         <button class="btn-close btn-close-white d-lg-none"></button>

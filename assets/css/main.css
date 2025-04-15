@@ -2226,7 +2226,8 @@ i {
   border-radius: 25px;
   overflow-y: auto;
   position: relative;
-  background: rgba(53, 11, 45, 0.3);
+  /* background: rgba(53, 11, 45, 0.3); */
+  background: #1c1e53;
   border: 1px solid rgba(255, 255, 255, 0.17);
   backdrop-filter: blur(15px);
 }
@@ -4393,7 +4394,8 @@ iframe {
 .preloader {
   width: 100%;
   height: 100%;
-  background: #2e0327;
+  /* background: #2e0327; */
+  background: #1c1e53;
   position: fixed;
   top: 0;
   left: 0;
@@ -4640,7 +4642,7 @@ iframe {
 
 /* My CSS Start */
 
-#typing-effect {
+.typing-effect {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -4648,7 +4650,7 @@ iframe {
   min-height: 70px;
 }
 
-#typing-effect::after {
+.typing-effect::after {
   content: '|';
   animation: blink 0.7s infinite;
   position: absolute;
@@ -4667,6 +4669,21 @@ iframe {
   }
 }
 
+.game-categories__item {
+  padding: 10px;
+  border: 1px solid #fcd980;
+  border-radius: 12px;
+}
+
+.game-categories__item:hover {
+  box-shadow: -4.828px -4.828px 12px 0px rgba(255, 200, 39, 0.4),
+    3px 5px 15px 0px rgba(255, 82, 1, 0.2);
+}
+
+.game-categories__item-img img {
+  width: 100%;
+}
+
 .home-page-game__categories {
   padding: 60px 0;
 }
@@ -4674,13 +4691,36 @@ iframe {
 .game-categories__item-content {
   background: #fcd980;
   color: #1c1e53;
-  padding: 10px 16px;
+  padding: 10px 10px;
   text-align: center;
   border-radius: 11px;
+  display: block;
 }
 .game-categories__item-content h4 {
   color: #1c1e53;
   line-height: 1.2;
   font-weight: 600;
-  font-size: 21px;
+  font-size: 17px;
+}
+.game-categories__item-content p {
+  line-height: 1.2;
+  color: #1c1e53;
+}
+
+.game-categories-tabs {
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  margin-bottom: 40px;
+}
+
+.game-categories-tabs .nav-link {
+  max-width: 200px;
+}
+.game-categories-tabs.nav-tabs .nav-item.show .nav-link,
+.game-categories-tabs.nav-tabs .nav-link.active {
+  background-color: unset;
+  border-color: unset;
+  box-shadow: unset;
+  outline: unset;
 }
